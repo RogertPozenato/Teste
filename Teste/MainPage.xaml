@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Teste.MainPage"
+             BackgroundColor="#4D5D39"
+             >
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                 Source="logo_villagio.png"
+                 HeightRequest="185"
+                 Aspect="AspectFit"
+                 SemanticProperties.Description="dot net bot in a hovercraft number nine" 
+                 WidthRequest="200"
+                />
+
+            <!--<Label
+                Text="Hello, World!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />-->
+
+            <!--<Label
+                x:Name="Recebe"
+                Text="Welcome to &#10;.NET Multi-platform App UI"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I" />-->
+            <HorizontalStackLayout
+                Padding="30,0"
+                Spacing="25"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            <Button 
+                Text="CADASTRO FAMÍLIA"
+                Clicked="OnAbrirCalendarioClicked"
+                HorizontalOptions="Center"
+                BackgroundColor="White"
+                TextColor="Black"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                BorderColor="Black"
+                BorderWidth="2"
+                Padding="15"
+                WidthRequest="200"
+                HeightRequest="50"
+            ></Button>
+
+            <Label
+            Text="ou"
+              TextColor="White"
+            Style="{StaticResource Headline}"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="Micro"
+                />
+
+            <Button 
+            Text="CADASTRO AGÊNCIA"
+            Clicked="Button_Agência"
+            HorizontalOptions="Center"
+            BackgroundColor="White"
+            TextColor="Black"
+            FontAttributes="Bold"
+            CornerRadius="10"
+            BorderColor="Black"
+            BorderWidth="2"
+            Padding="15"
+            WidthRequest="200"
+            HeightRequest="50"
+            ></Button>
+
+            <!--<Button
+                 x:Name="Aula1"
+                Text="CADASTRO AGÊNCIA"
+                HorizontalOptions="Center"
+                Clicked="Aula1_Clicked"
+                BackgroundColor="White"
+                TextColor="Black"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                BorderColor="Black"
+                BorderWidth="2"
+                Padding="15"
+                WidthRequest="200"
+                HeightRequest="50"
+                />-->
+            <VerticalStackLayout>
+            <Label Text="Já tem conta? Entre aqui"
+               TextColor="White"
+               FontAttributes="Bold"
+               FontSize="Micro"
+               HorizontalOptions="Center">
+      
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+
+            </Label>
+            </VerticalStackLayout>
+
+            <HorizontalStackLayout/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+

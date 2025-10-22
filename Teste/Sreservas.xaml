@@ -1,0 +1,45 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Teste.Sreservas"
+             Title="Sreservas"
+             BackgroundColor="#4D5D39">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="25">
+            <CollectionView ItemsSource="{Binding Reservas}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout Spacing="10" BackgroundColor="#F0F0F0" Padding="15" WidthRequest="400" HeightRequest="330">
+                            <Label Text="{Binding Nome}" FontSize="18" />
+                            <Label Text="{Binding Dia}" />
+                            <Label Text="{Binding Horario}" />
+                            <Label Text="{Binding Pessoas}" />
+                            <Label Text="{Binding Detalhes}" />
+                            <Label Text="{Binding Cafe}" />
+                            <Label Text="{Binding Valor}" FontAttributes="Bold" FontSize="16" />
+                            <Button Text="CANCELAR"
+                                    BackgroundColor="Red"
+                                    TextColor="White"
+                                    Clicked="OnCancelarClicked"
+                                    BindingContext="{Binding}" />
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Button x:Name="B"
+                    Text="VOLTAR"
+                    Clicked="VoltarClicked"
+                    HorizontalOptions="Center"
+                    BackgroundColor="White"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Padding="20"
+                    WidthRequest="300"
+                    HeightRequest="60" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

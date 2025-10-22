@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Teste.Pagamento"
+             Title="Pagamento"
+             BackgroundColor="#4D5D39">
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="30" >
+     <Label Text="PAGAMENTO" TextColor="White" Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1" FontSize="20" />
+        <Image
+      Source="qr_code.png"
+      HeightRequest="185"
+      Aspect="AspectFit"
+      SemanticProperties.Description="dot net bot in a hovercraft number nine" 
+      WidthRequest="200"       
+     />
+
+        <HorizontalStackLayout Padding="30" Spacing="50" HorizontalOptions="Center" VerticalOptions="Center" >
+            <Entry x:Name="PixEntry"
+               Text="9u93djncur3ji"
+               IsReadOnly="True"
+               FontSize="18"
+                WidthRequest="200"
+                BackgroundColor="White"/>
+
+            <Button Text="Copiar Chave Pix"
+                Clicked="OnCopyPixClicked"
+                BackgroundColor="#EBB591"
+                TextColor="White" 
+                    WidthRequest="150"/>
+        </HorizontalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>
