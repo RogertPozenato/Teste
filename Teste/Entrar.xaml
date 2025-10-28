@@ -16,6 +16,7 @@
                 HorizontalOptions="Center"
                FontSize="16"
                Padding="30"
+               TextColor="White"
                >
 
         </Label>

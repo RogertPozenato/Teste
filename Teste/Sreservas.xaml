@@ -5,6 +5,7 @@
              BackgroundColor="#4D5D39">
 
     <ScrollView>
+        
         <VerticalStackLayout Padding="20" Spacing="25">
             <CollectionView ItemsSource="{Binding Reservas}">
                 <CollectionView.ItemTemplate>
@@ -26,7 +27,6 @@
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-
             <Button x:Name="B"
                     Text="VOLTAR"
                     Clicked="VoltarClicked"
