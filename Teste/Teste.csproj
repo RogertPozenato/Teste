@@ -85,6 +85,9 @@
 	  <MauiXaml Update="NewPage2.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="OutroSreservas.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Pagamento.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

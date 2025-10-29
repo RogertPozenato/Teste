@@ -8,12 +8,26 @@ public partial class NewPage1 : ContentPage
         InitializeComponent();
     }
 
-    private async void A_Clicked(object sender, EventArgs e)
+    private async void OnCadastrarClicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new NewPage2());
-    }
+        // Verifica se todos os campos estão preenchidos
+        if (string.IsNullOrWhiteSpace(NomeEntry.Text) ||
+            string.IsNullOrWhiteSpace(TelefoneEntry.Text) ||
+            string.IsNullOrWhiteSpace(SenhaEntry.Text))
+        {
+            await DisplayAlert("Erro", "Preencha todos os campos antes de continuar.", "OK");
+            return;
+        }
 
-    private async void B_Clicked(object sender, EventArgs e)
+        else
+        {
+            // Se tudo estiver certo:
+            await DisplayAlert("Sucesso", "Cadastro realizado com sucesso!", "OK");
+            await Navigation.PushAsync(new NewPage2()); // vai para a próxima página
+        }
+
+    }
+    private async void OnVoltarClicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new MainPage());
     }

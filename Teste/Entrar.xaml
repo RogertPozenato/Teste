@@ -15,6 +15,7 @@
         <Label Text="ENTRAR"
                 HorizontalOptions="Center"
                FontSize="16"
+               FontFamily="Canvas_Inline_Reg"
                Padding="30"
                TextColor="White"
                >
@@ -22,18 +23,19 @@
         </Label>
 
         <Grid ColumnDefinitions="Auto, *, Auto" Padding="20" HorizontalOptions="Center" ColumnSpacing="25">
-            <Label Text="Telefone:" Grid.Column="0" FontSize="21" FontFamily=""
+            <Label Text="Telefone:" Grid.Column="0" FontSize="21" FontFamily="Canvas_Inline_Reg"
                    TextColor="White"/>
             <Entry Placeholder="Digite seu telefone" Grid.Column="1"
+                   x:Name="TelefoneEntry"
                    BackgroundColor="#EBB591" 
                     WidthRequest="350"
                    HeightRequest="5"
 />
         </Grid>
         <Grid ColumnDefinitions="Auto, *, Auto" Padding="20" HorizontalOptions="Center" ColumnSpacing="25">
-            <Label Text="Senha:" Grid.Column="0" FontSize="21" FontFamily=""
+            <Label Text="Senha:" Grid.Column="0" FontSize="21" FontFamily="Canvas_Inline_Reg"
                    TextColor="White"/>
-            <Entry Placeholder="Senha" IsPassword="True" x:Name="senhaEntry"
+            <Entry Placeholder="Senha" IsPassword="True" x:Name="SenhaEntry"
                    Grid.Column="1"
                    BackgroundColor="#EBB591" 
                     WidthRequest="350"
@@ -42,39 +44,8 @@
         </Grid>
 
         <HorizontalStackLayout Spacing="20" Padding="50" HorizontalOptions="Center">
-            <Button
-          x:Name="C"
-         Text="VOLTAR"
-          Grid.Column="1"
-          Clicked="C_Clicked"
-         HorizontalOptions="Center"
-         BackgroundColor="White"
-         TextColor="Black"
-         FontAttributes="Bold"
-         CornerRadius="10"
-         BorderColor="Black"
-         BorderWidth="2"
-         Padding="20"
-         WidthRequest="300"
-         HeightRequest="60"
-         />
-
-            <Button
-          x:Name="D"
-         Text="CADASTRAR"
-            Grid.Column="1"
-         Clicked="D_Clicked"
-         HorizontalOptions="Center"
-         BackgroundColor="White"
-         TextColor="Black"
-         FontAttributes="Bold"
-         CornerRadius="10"
-         BorderColor="Black"
-         BorderWidth="2"
-         Padding="20"
-         WidthRequest="300"
-         HeightRequest="60"
-         />
+            <Button Text="Voltar" Clicked="OnVoltarClicked" WidthRequest="300" HeightRequest="60" BackgroundColor="White" TextColor="Black"  CornerRadius="10" />
+            <Button Text="Cadastrar" Clicked="OnCadastrarClicked"  WidthRequest="300" HeightRequest="60" BackgroundColor="White" TextColor="Black" CornerRadius="10"/>
         </HorizontalStackLayout>
 
 

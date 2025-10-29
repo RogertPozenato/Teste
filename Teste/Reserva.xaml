@@ -7,13 +7,10 @@
 
     
     <ScrollView>
-        
-       
-    <VerticalStackLayout Padding="20" Spacing="30">
 
 
-
-
+        <VerticalStackLayout Padding="20" Spacing="30">
+            
             <VerticalStackLayout Padding="20" Spacing="15">
                 <!-- Cabeçalho com botões -->
                 <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
@@ -27,28 +24,27 @@
 
                 <!-- Dias da semana -->
                 <HorizontalStackLayout HorizontalOptions="Center" Spacing="30">
-                    <Label Text="D" TextColor="White" FontSize="25"/>
-                    <Label Text="S" TextColor="White" FontSize="25"/>
-                    <Label Text="T" TextColor="White" FontSize="25"/>
-                    <Label Text="Q" TextColor="White" FontSize="25"/>
-                    <Label Text="Q" TextColor="White" FontSize="25"/>
-                    <Label Text="S" TextColor="White" FontSize="25"/>
-                    <Label Text="S" TextColor="White" FontSize="25"/>
+                    <Label Text="D" TextColor="White" FontSize="25" />
+                    <Label Text="S" TextColor="White" FontSize="25" />
+                    <Label Text="T" TextColor="White" FontSize="25" />
+                    <Label Text="Q" TextColor="White" FontSize="25" />
+                    <Label Text="Q" TextColor="White" FontSize="25" />
+                    <Label Text="S" TextColor="White" FontSize="25" />
+                    <Label Text="S" TextColor="White" FontSize="25" />
                 </HorizontalStackLayout>
 
                 <!-- Grade dinâmica -->
+                
                 <Grid x:Name="CalendarGrid"
               HorizontalOptions="Center"
                       VerticalOptions="Center"
-              RowSpacing="10" ColumnSpacing="10"
-                      BackgroundColor="#680D2B"
-                      WidthRequest="359"
-                      HeightRequest="297"
-                      />
+              RowSpacing="10" ColumnSpacing="10" BackgroundColor="#680D2B" WidthRequest="359" HeightRequest="297"  />
+
 
                 <!-- Safras -->
                 <Label x:Name="SafraLabel"
                FontSize="18"
+                FontFamily="Canvas_Inline_Reg"
                TextColor="#FCBC71"
                HorizontalOptions="Center"
                Margin="10"/>
@@ -67,7 +63,7 @@
 
             <!-- Controle 1: 0 a 5 anos -->
         <VerticalStackLayout Spacing="10">
-            <Label Text="0 A 5 ANOS" FontSize="18" HorizontalOptions="Center" TextColor="White"/>
+                <Label Text="0 A 5 ANOS" FontSize="18" HorizontalOptions="Center" TextColor="White" FontFamily="Canvas_Inline_Reg"/>
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
                 <Border Stroke="Gray" StrokeThickness="1" BackgroundColor="White" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25">
                     <Label Text="-" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
@@ -91,7 +87,7 @@
 
         <!-- Controle 2: 6 a 12 anos -->
         <VerticalStackLayout Spacing="10">
-            <Label Text="6 A 12 ANOS" FontSize="18" HorizontalOptions="Center" TextColor="White"/>
+            <Label Text="6 A 12 ANOS" FontSize="18" HorizontalOptions="Center" TextColor="White" FontFamily="Canvas_Inline_Reg"/>
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
                 <Border Stroke="Gray" StrokeThickness="1" BackgroundColor="White" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25">
                     <Label Text="-" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
@@ -115,7 +111,7 @@
 
         <!-- Controle 3: Mais de 12 anos -->
         <VerticalStackLayout Spacing="10">
-            <Label Text="Adultos" FontSize="18" HorizontalOptions="Center" TextColor="White"/>
+                <Label Text="Adultos" FontSize="18" HorizontalOptions="Center" TextColor="White" FontFamily="Canvas_Inline_Reg"/>
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
                 <Border Stroke="Gray" StrokeThickness="1" BackgroundColor="White" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25">
                     <Label Text="-" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
@@ -149,6 +145,7 @@
                     <Label Text="TRENZINHO/COLHE E PAGA 
                        R$ 15,00" 
                        HorizontalOptions="Center"
+                       FontFamily="Canvas_Inline_Reg"
                        TextColor="White"/>
                 <CheckBox x:Name="TC" 
                            Color="#EBB591"
@@ -158,6 +155,7 @@
                 <Label Text="CAFÉ COMPLETO: 
                        R$ 65,00"
                        HorizontalOptions="Center"
+                       FontFamily="Canvas_Inline_Reg"
                        TextColor="White"/>
                 <CheckBox x:Name="CafeCompleto" 
                           Color="#EBB591"
@@ -168,14 +166,15 @@
                 <Label Text="CAFÉ BÁSICO:
                        R$ 55,00" 
                        HorizontalOptions="Center"
+                       FontFamily="Canvas_Inline_Reg"
                        TextColor="White"/>
                 <CheckBox x:Name="CafeBasico"
                           Color="#EBB591"
                           WidthRequest="70"
                           HeightRequest="70"/>
 
-                <Label x:Name="lblTotal" Text="VALOR TOTAL: R$ 00,00" FontSize="18" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" />
-                <Button Text="FAZER RESERVA" Clicked="OnFazerReservaClicked" BackgroundColor="#B27C5D" WidthRequest="300"/>
+                    <Label x:Name="lblTotal" Text="VALOR TOTAL: R$ 00,00" FontSize="18" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" FontFamily="Canvas_Inline_Reg" />
+                    <Button Text="FAZER RESERVA" Clicked="OnFazerReservaClicked" BackgroundColor="#B27C5D" WidthRequest="300" FontFamily="Canvas_Inline_Reg" FontSize="16"/>
                 
             </VerticalStackLayout>
             

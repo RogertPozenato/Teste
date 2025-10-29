@@ -1,11 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Teste.Sreservas"
-             Title="Sreservas"
-             BackgroundColor="#4D5D39">
-
+             x:Class="Teste.OutroSreservas"
+             Title="OutroSreservas"
+              BackgroundColor="#4D5D39">
     <ScrollView>
-        
+
         <VerticalStackLayout Padding="20" Spacing="50">
             <CollectionView ItemsSource="{Binding Reservas}">
                 <CollectionView.ItemTemplate>
@@ -18,11 +18,6 @@
                             <Label Text="{Binding Detalhes}" />
                             <Label Text="{Binding Cafe}" />
                             <Label Text="{Binding Valor}" FontAttributes="Bold" FontSize="16" />
-                            <Button Text="CANCELAR"
-                                    BackgroundColor="#EBB591"
-                                    TextColor="White"
-                                    Clicked="OnCancelarClicked"
-                                    BindingContext="{Binding}" />
                         </VerticalStackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

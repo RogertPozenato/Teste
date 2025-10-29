@@ -24,10 +24,23 @@
 
             <Button Text="Copiar Chave Pix"
                 Clicked="OnCopyPixClicked"
+                FontFamily="Canvas_Inline_Reg"
                 BackgroundColor="#EBB591"
                 TextColor="White" 
                     WidthRequest="150"/>
         </HorizontalStackLayout>
-
+        <Button x:Name="B"
+         Text="VER SUAS RESERVAS"
+         Clicked="VerClicked"
+         HorizontalOptions="Center"
+         BackgroundColor="White"
+         TextColor="Black"
+         FontAttributes="Bold"
+         CornerRadius="10"
+         BorderColor="Black"
+         BorderWidth="2"
+         Padding="20"
+         WidthRequest="300"
+         HeightRequest="60" />
     </VerticalStackLayout>
 </ContentPage>
