@@ -4,8 +4,10 @@
              Title="Sreservas"
              BackgroundColor="#4D5D39">
 
+
+
     <ScrollView>
-        
+
         <VerticalStackLayout Padding="20" Spacing="50">
             <CollectionView ItemsSource="{Binding Reservas}">
                 <CollectionView.ItemTemplate>
@@ -14,7 +16,6 @@
                             <Label Text="{Binding Nome}" FontSize="18" />
                             <Label Text="{Binding Dia}" />
                             <Label Text="{Binding Horario}" />
-                            <Label Text="{Binding Pessoas}" />
                             <Label Text="{Binding Detalhes}" />
                             <Label Text="{Binding Cafe}" />
                             <Label Text="{Binding Valor}" FontAttributes="Bold" FontSize="16" />

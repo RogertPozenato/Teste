@@ -142,10 +142,10 @@
                 <VerticalStackLayout Padding="20" Spacing="15" >
                     
                     
-                    <Label Text="TRENZINHO/COLHE E PAGA 
-                       R$ 15,00" 
+                    <Label Text="TRENZINHO/COLHE E PAGA R$ 15,00" 
                        HorizontalOptions="Center"
                        FontFamily="Canvas_Inline_Reg"
+                           FontSize="15"
                        TextColor="White"/>
                 <CheckBox x:Name="TC" 
                            Color="#EBB591"

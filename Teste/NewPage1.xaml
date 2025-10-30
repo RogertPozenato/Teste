@@ -6,58 +6,52 @@
              NavigationPage.BackButtonTitle="Mes"
              BackgroundColor="#4D5D39">
 
-    <VerticalStackLayout>
-        
-        <HorizontalStackLayout
-                Padding="30,0"
-                Spacing="25"
-                HorizontalOptions="Center" />
+    <VerticalStackLayout
+        VerticalOptions="CenterAndExpand"
+        HorizontalOptions="Center"
+        Spacing="20"
+        Padding="20">
 
         <Label Text="CADASTRO FAMÍLIA"
-                HorizontalOptions="Center"
-                FontFamily="Canvas_Inline_Reg"
-               FontSize="16"
-               Padding="30"
-               TextColor="White"
-               >
-          
-        </Label>
-        
-        <Grid ColumnDefinitions="Auto, *, Auto" Padding="20" HorizontalOptions="Center" ColumnSpacing="25">
-            <Label Text="Nome:" Grid.Column="0" FontSize="21"  FontFamily="Canvas_Inline_Reg"
-                   TextColor="White"/>
-            <Entry Placeholder="Digite seu telefone" Grid.Column="1"
+               HorizontalOptions="Center"
+               FontSize="20"
+               FontFamily="Canvas_Inline_Reg"
+               TextColor="White" />
+
+        <!-- Campos -->
+        <Grid ColumnDefinitions="Auto, *" ColumnSpacing="15">
+            <Label Text="Nome:" Grid.Column="0" FontSize="18" TextColor="White"/>
+            <Entry Placeholder="Digite seu nome" Grid.Column="1"
                    x:Name="NomeEntry"
-                   BackgroundColor="#EBB591" 
-                    WidthRequest="350"
-                   HeightRequest="5"
-/>
+                   BackgroundColor="#EBB591"
+                   WidthRequest="250"/>
         </Grid>
-        <Grid ColumnDefinitions="Auto, *, Auto" Padding="20" HorizontalOptions="Center" ColumnSpacing="25">
-            <Label Text="Telefone:" Grid.Column="0" FontSize="21"  FontFamily="Canvas_Inline_Reg"
-                   TextColor="White"/>
+
+        <Grid ColumnDefinitions="Auto, *" ColumnSpacing="15">
+            <Label Text="Telefone:" Grid.Column="0" FontSize="18" TextColor="White"/>
             <Entry Placeholder="Digite seu telefone" Grid.Column="1"
                    x:Name="TelefoneEntry"
-                   BackgroundColor="#EBB591" 
-                    WidthRequest="350"
-                   HeightRequest="5"
-/>
+                   BackgroundColor="#EBB591"
+                   WidthRequest="250"/>
         </Grid>
-        <Grid ColumnDefinitions="Auto, *, Auto" Padding="20" HorizontalOptions="Center" ColumnSpacing="25">
-            <Label Text="Senha:" Grid.Column="0" FontSize="21"  FontFamily="Canvas_Inline_Reg"
-                   TextColor="White"/>
-            <Entry Placeholder="Senha" IsPassword="True" x:Name="SenhaEntry"
-                   Grid.Column="1"
-                   BackgroundColor="#EBB591" 
-                    WidthRequest="350"
-                   HeightRequest="5"
-                   />
+
+        <Grid ColumnDefinitions="Auto, *" ColumnSpacing="15">
+            <Label Text="Senha:" Grid.Column="0" FontSize="18" TextColor="White"/>
+            <Entry Placeholder="Senha" IsPassword="True" Grid.Column="1"
+                   x:Name="SenhaEntry"
+                   BackgroundColor="#EBB591"
+                   WidthRequest="250"/>
         </Grid>
-        <HorizontalStackLayout Spacing="20" Padding="50" HorizontalOptions="Center">
-            <Button Text="Voltar" Clicked="OnVoltarClicked" WidthRequest="300" HeightRequest="60" BackgroundColor="White" TextColor="Black"  CornerRadius="10"/>
-            <Button Text="Cadastrar" Clicked="OnCadastrarClicked"  WidthRequest="300" HeightRequest="60" BackgroundColor="White" TextColor="Black" CornerRadius="10"/>
+
+        <!-- Botões -->
+        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
+            <Button Text="Voltar" Clicked="OnVoltarClicked"
+                    WidthRequest="120" HeightRequest="50"
+                    BackgroundColor="White" TextColor="Black" CornerRadius="10"/>
+            <Button Text="Cadastrar" Clicked="OnCadastrarClicked"
+                    WidthRequest="120" HeightRequest="50"
+                    BackgroundColor="White" TextColor="Black" CornerRadius="10"/>
         </HorizontalStackLayout>
 
-        <HorizontalStackLayout/>
     </VerticalStackLayout>
 </ContentPage>

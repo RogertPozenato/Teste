@@ -4,43 +4,62 @@
              x:Class="Teste.Pagamento"
              Title="Pagamento"
              BackgroundColor="#4D5D39">
-    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="30" >
-     <Label Text="PAGAMENTO" TextColor="White" Style="{StaticResource Headline}" SemanticProperties.HeadingLevel="Level1" FontSize="20" />
-        <Image
-      Source="qr_code.png"
-      HeightRequest="185"
-      Aspect="AspectFit"
-      SemanticProperties.Description="dot net bot in a hovercraft number nine" 
-      WidthRequest="200"       
-     />
 
-        <HorizontalStackLayout Padding="30" Spacing="50" HorizontalOptions="Center" VerticalOptions="Center" >
+    <VerticalStackLayout
+    VerticalOptions="CenterAndExpand"
+    HorizontalOptions="Center"
+    Spacing="30"
+    Padding="20">
+
+        <!-- Título -->
+        <Label Text="PAGAMENTO"
+           TextColor="White"
+           FontSize="20"
+           FontAttributes="Bold"
+           HorizontalOptions="Center" />
+
+        <!-- QR Code -->
+        <Image Source="qr_code.png"
+           HeightRequest="185"
+           WidthRequest="200"
+           Aspect="AspectFit"
+           HorizontalOptions="Center" />
+
+        <!-- Chave Pix e Botão Copiar -->
+        <HorizontalStackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Spacing="20"
+        Padding="10">
+
             <Entry x:Name="PixEntry"
                Text="9u93djncur3ji"
                IsReadOnly="True"
                FontSize="18"
-                WidthRequest="200"
-                BackgroundColor="White"/>
+               WidthRequest="200"
+               BackgroundColor="White"
+               HorizontalOptions="Center" />
 
             <Button Text="Copiar Chave Pix"
                 Clicked="OnCopyPixClicked"
-                FontFamily="Canvas_Inline_Reg"
                 BackgroundColor="#EBB591"
-                TextColor="White" 
-                    WidthRequest="150"/>
+                TextColor="White"
+                WidthRequest="150"
+                CornerRadius="8" />
         </HorizontalStackLayout>
+
+        <!-- Botão Reservas -->
         <Button x:Name="B"
-         Text="VER SUAS RESERVAS"
-         Clicked="VerClicked"
-         HorizontalOptions="Center"
-         BackgroundColor="White"
-         TextColor="Black"
-         FontAttributes="Bold"
-         CornerRadius="10"
-         BorderColor="Black"
-         BorderWidth="2"
-         Padding="20"
-         WidthRequest="300"
-         HeightRequest="60" />
+            Text="VER SUAS RESERVAS"
+            Clicked="VerClicked"
+            HorizontalOptions="Center"
+            BackgroundColor="White"
+            TextColor="Black"
+            FontAttributes="Bold"
+            CornerRadius="10"
+            BorderColor="Black"
+            BorderWidth="2"
+            WidthRequest="300"
+            HeightRequest="60" />
     </VerticalStackLayout>
 </ContentPage>

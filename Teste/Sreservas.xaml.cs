@@ -16,7 +16,6 @@ public partial class Sreservas : ContentPage
                 Nome = "Juan Carlos Silva",
                 Dia = "13/09/2025",
                 Horario = "13:00",
-                Pessoas = "3",
                 Detalhes = "2 de 12 anos e mais\n1 de 6 a 12 anos",
                 Cafe = "Café da manhã básico",
                 Valor = "R$ 137,50"
@@ -25,7 +24,6 @@ public partial class Sreservas : ContentPage
                 Nome = "Juan Carlos Silva",
                 Dia = "21/09/2025",
                 Horario = "13:00",
-                Pessoas = "3",
                 Detalhes = "2 de 12 anos e mais\n1 de 6 a 12 anos",
                 Cafe = "Café da manhã básico",
                 Valor = "R$ 137,50"
