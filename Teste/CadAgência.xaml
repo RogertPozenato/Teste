@@ -15,59 +15,68 @@
         <Label Text="CADASTRO AGÊNCIA"
                HorizontalOptions="Center"
                FontSize="20"
-               FontFamily="Canvas_Inline_Reg"
+               FontFamily=""
                TextColor="White" />
 
-        <!-- Campos -->
-        <Grid ColumnDefinitions="Auto, *" ColumnSpacing="15">
-            <Label Text="Nome:" Grid.Column="0" FontSize="18" TextColor="White"/>
-            <Entry Placeholder="Digite seu nome" Grid.Column="1"
-                   x:Name="NomeEntry"
-                   BackgroundColor="#EBB591"
-                   WidthRequest="250"/>
+        <Grid ColumnDefinitions="80, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnSpacing="20" RowSpacing="20">
+            <!-- Nome -->
+            <Label Text="Nome:" Grid.Row="0" Grid.Column="0" FontSize="18" TextColor="White" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="Digite seu nome" Grid.Row="0" Grid.Column="1"
+           x:Name="NomeEntry"
+           BackgroundColor="#EBB591"
+           WidthRequest="250"
+           HeightRequest="40"/>
+
+            <!-- Telefone -->
+            <Label Text="Telefone:" Grid.Row="1" Grid.Column="0" FontSize="18" TextColor="White" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="Digite seu telefone" Grid.Row="1" Grid.Column="1"
+           x:Name="TelefoneEntry"
+           BackgroundColor="#EBB591"
+           WidthRequest="250"
+           HeightRequest="40"/>
+
+            <!-- Email -->
+            <Label Text="Email:" Grid.Row="2" Grid.Column="0" FontSize="18" TextColor="White" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="Digite seu e-mail" Keyboard="Email" Grid.Row="2" Grid.Column="1"
+           x:Name="EmailEntry"
+           BackgroundColor="#EBB591"
+           WidthRequest="250"
+           HeightRequest="40"/>
+
+            <!-- CNPJ -->
+            <Label Text="CNPJ:" Grid.Row="3" Grid.Column="0" FontSize="18" TextColor="White" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="Digite seu CNPJ" Grid.Row="3" Grid.Column="1"
+           x:Name="CnpjEntry"
+           BackgroundColor="#EBB591"
+           WidthRequest="250"
+           HeightRequest="40"/>
+
+            <!-- Senha -->
+            <Label Text="Senha:" Grid.Row="4" Grid.Column="0" FontSize="18" TextColor="White" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="Senha" IsPassword="True" Grid.Row="4" Grid.Column="1"
+           x:Name="SenhaEntry"
+           BackgroundColor="#EBB591"
+           WidthRequest="250"
+           HeightRequest="40"/>
+
+
+            <!-- Botões -->
+            <HorizontalStackLayout Grid.Row="5" Grid.Column="2" Spacing="20" HorizontalOptions="Start">
+                <Button Text="Voltar" Clicked="OnVoltarClicked"
+                WidthRequest="120" HeightRequest="50"
+                BackgroundColor="White" TextColor="Black" CornerRadius="10"/>
+                <Button Text="Cadastrar" Clicked="OnCadastrarClicked"
+                WidthRequest="120" HeightRequest="50"
+                BackgroundColor="White" TextColor="Black" CornerRadius="10"/>
+            </HorizontalStackLayout>
+            
         </Grid>
 
-        <Grid ColumnDefinitions="Auto, *" ColumnSpacing="15">
-            <Label Text="Telefone:" Grid.Column="0" FontSize="18" TextColor="White"/>
-            <Entry Placeholder="Digite seu telefone" Grid.Column="1"
-                   x:Name="TelefoneEntry"
-                   BackgroundColor="#EBB591"
-                   WidthRequest="250"/>
-        </Grid>
 
-        <Grid ColumnDefinitions="Auto, *" ColumnSpacing="15">
-            <Label Text="Email:" Grid.Column="0" FontSize="18" TextColor="White"/>
-            <Entry Placeholder="Digite seu e-mail" Keyboard="Email" Grid.Column="1"
-                   x:Name="EmailEntry"
-                   BackgroundColor="#EBB591"
-                   WidthRequest="250"/>
-        </Grid>
 
-        <Grid ColumnDefinitions="Auto, *" ColumnSpacing="15">
-            <Label Text="CNPJ:" Grid.Column="0" FontSize="18" TextColor="White"/>
-            <Entry Placeholder="Digite seu CNPJ" Grid.Column="1"
-                   x:Name="CnpjEntry"
-                   BackgroundColor="#EBB591"
-                   WidthRequest="250"/>
-        </Grid>
 
-        <Grid ColumnDefinitions="Auto, *" ColumnSpacing="15">
-            <Label Text="Senha:" Grid.Column="0" FontSize="18" TextColor="White"/>
-            <Entry Placeholder="Senha" IsPassword="True" Grid.Column="1"
-                   x:Name="SenhaEntry"
-                   BackgroundColor="#EBB591"
-                   WidthRequest="250"/>
-        </Grid>
 
-        <!-- Botões -->
-        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
-            <Button Text="Voltar" Clicked="OnVoltarClicked"
-                    WidthRequest="120" HeightRequest="50"
-                    BackgroundColor="White" TextColor="Black" CornerRadius="10"/>
-            <Button Text="Cadastrar" Clicked="OnCadastrarClicked"
-                    WidthRequest="120" HeightRequest="50"
-                    BackgroundColor="White" TextColor="Black" CornerRadius="10"/>
-        </HorizontalStackLayout>
+
 
     </VerticalStackLayout>
 </ContentPage>

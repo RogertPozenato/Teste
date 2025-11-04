@@ -10,7 +10,7 @@
 
 
         <VerticalStackLayout Padding="20" Spacing="30">
-            
+
             <VerticalStackLayout Padding="20" Spacing="15">
                 <!-- Cabeçalho com botões -->
                 <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
@@ -24,21 +24,21 @@
 
                 <!-- Dias da semana -->
                 <HorizontalStackLayout HorizontalOptions="Center" Spacing="30">
-                    <Label Text="D" TextColor="White" FontSize="25" />
-                    <Label Text="S" TextColor="White" FontSize="25" />
-                    <Label Text="T" TextColor="White" FontSize="25" />
-                    <Label Text="Q" TextColor="White" FontSize="25" />
-                    <Label Text="Q" TextColor="White" FontSize="25" />
-                    <Label Text="S" TextColor="White" FontSize="25" />
-                    <Label Text="S" TextColor="White" FontSize="25" />
+                    <Label Text="D" TextColor="White" FontSize="15" />
+                    <Label Text="S" TextColor="White" FontSize="15" />
+                    <Label Text="T" TextColor="White" FontSize="15" />
+                    <Label Text="Q" TextColor="White" FontSize="15" />
+                    <Label Text="Q" TextColor="White" FontSize="15" />
+                    <Label Text="S" TextColor="White" FontSize="15" />
+                    <Label Text="S" TextColor="White" FontSize="15" />
                 </HorizontalStackLayout>
 
                 <!-- Grade dinâmica -->
-                
+
                 <Grid x:Name="CalendarGrid"
               HorizontalOptions="Center"
                       VerticalOptions="Center"
-              RowSpacing="10" ColumnSpacing="10" BackgroundColor="#680D2B" WidthRequest="359" HeightRequest="297"  />
+              RowSpacing="10" ColumnSpacing="10" BackgroundColor="#680D2B" WidthRequest="350" HeightRequest="300"  />
 
 
                 <!-- Safras -->
@@ -56,11 +56,6 @@
                                Spacing="10"
                                Margin="20"/>
             </VerticalStackLayout>
-
-
-
-
-
             <!-- Controle 1: 0 a 5 anos -->
         <VerticalStackLayout Spacing="10">
                 <Label Text="0 A 5 ANOS" FontSize="18" HorizontalOptions="Center" TextColor="White" FontFamily="Canvas_Inline_Reg"/>

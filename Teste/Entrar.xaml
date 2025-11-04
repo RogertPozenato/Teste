@@ -17,30 +17,36 @@
                FontFamily="Canvas_Inline_Reg"
                TextColor="White" />
 
-        <Grid ColumnDefinitions="Auto, *" ColumnSpacing="15">
-            <Label Text="Telefone:" Grid.Column="0" FontSize="18" TextColor="White"/>
-            <Entry Placeholder="Digite seu telefone" Grid.Column="1"
-                   x:Name="TelefoneEntry"
-                   BackgroundColor="#EBB591"
-                   WidthRequest="250"/>
-        </Grid>
-        <Grid ColumnDefinitions="Auto, *" ColumnSpacing="15">
-            <Label Text="Senha:" Grid.Column="0" FontSize="18" TextColor="White"/>
-            <Entry Placeholder="Senha" IsPassword="True" Grid.Column="1"
-                   x:Name="SenhaEntry"
-                   BackgroundColor="#EBB591"
-                   WidthRequest="250"/>
-        </Grid>
+        <Grid ColumnDefinitions="80, *" RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto" ColumnSpacing="20" RowSpacing="20">
 
-        <!-- Botões -->
-        <HorizontalStackLayout Spacing="20" HorizontalOptions="Center">
-            <Button Text="Voltar" Clicked="OnVoltarClicked"
-                    WidthRequest="120" HeightRequest="50"
-                    BackgroundColor="White" TextColor="Black" CornerRadius="10"/>
-            <Button Text="Cadastrar" Clicked="OnCadastrarClicked"
-                    WidthRequest="120" HeightRequest="50"
-                    BackgroundColor="White" TextColor="Black" CornerRadius="10"/>
-        </HorizontalStackLayout>
+            <!-- Telefone -->
+            <Label Text="Telefone:" Grid.Row="1" Grid.Column="0" FontSize="18" TextColor="White" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="Digite seu telefone" Grid.Row="1" Grid.Column="1"
+           x:Name="TelefoneEntry"
+           BackgroundColor="#EBB591"
+           WidthRequest="250"
+           HeightRequest="40"/>
+
+            <!-- Senha -->
+            <Label Text="Senha:" Grid.Row="2" Grid.Column="0" FontSize="18" TextColor="White" VerticalTextAlignment="Center"/>
+            <Entry Placeholder="Senha" IsPassword="True" Grid.Row="2" Grid.Column="1"
+           x:Name="SenhaEntry"
+           BackgroundColor="#EBB591"
+           WidthRequest="250"
+           HeightRequest="40"/>
+
+
+            <!-- Botões -->
+            <HorizontalStackLayout Grid.Row="3" Grid.Column="2" Spacing="20" HorizontalOptions="Start">
+                <Button Text="Voltar" Clicked="OnVoltarClicked"
+                WidthRequest="120" HeightRequest="50"
+                BackgroundColor="White" TextColor="Black" CornerRadius="10"/>
+                <Button Text="Cadastrar" Clicked="OnCadastrarClicked"
+                WidthRequest="120" HeightRequest="50"
+                BackgroundColor="White" TextColor="Black" CornerRadius="10"/>
+            </HorizontalStackLayout>
+
+        </Grid>
 
     </VerticalStackLayout>
 </ContentPage>
