@@ -7,27 +7,38 @@
 
 
     <ScrollView>
-
-        <VerticalStackLayout Padding="20" Spacing="50">
+        <VerticalStackLayout Padding="20" Spacing="30">
             <CollectionView ItemsSource="{Binding Reservas}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <VerticalStackLayout Spacing="10" BackgroundColor="#F0F0F0" Padding="15" WidthRequest="400" HeightRequest="330">
-                            <Label Text="{Binding Nome}" FontSize="18" />
+
+                        <Border Stroke="Black"
+                                StrokeThickness="1"
+                                BackgroundColor="White"
+                                Padding="15"
+                                Margin="0,10"
+                                WidthRequest="500"
+                                StrokeShape="RoundRectangle 10">
+                            <VerticalStackLayout Spacing="15">
+
+                                <Label Text="{Binding Nome}" FontSize="18" FontAttributes="Bold"/>
                             <Label Text="{Binding Dia}" />
                             <Label Text="{Binding Horario}" />
                             <Label Text="{Binding Detalhes}" />
                             <Label Text="{Binding Cafe}" />
-                            <Label Text="{Binding Valor}" FontAttributes="Bold" FontSize="16" />
+                            <Label Text="{Binding Valor}" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
                             <Button Text="CANCELAR"
                                     BackgroundColor="#EBB591"
                                     TextColor="White"
+                                    CornerRadius="10"
                                     Clicked="OnCancelarClicked"
                                     BindingContext="{Binding}" />
                         </VerticalStackLayout>
+                        </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
+
             <Button x:Name="B"
                     Text="VOLTAR"
                     Clicked="VoltarClicked"
@@ -43,4 +54,9 @@
                     HeightRequest="60" />
         </VerticalStackLayout>
     </ScrollView>
+
+
 </ContentPage>
+
+
+

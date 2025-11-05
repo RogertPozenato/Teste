@@ -51,12 +51,17 @@
 
 
                 <!-- Lista de horários -->
-                <HorizontalStackLayout x:Name="TimeSlotsLayout"
-                               HorizontalOptions="Center"
-                               Spacing="10"
-                               Margin="20"/>
-            </VerticalStackLayout>
-            <!-- Controle 1: 0 a 5 anos -->
+             <FlexLayout x:Name="TimeSlotsLayout"
+            Direction="Row"
+            Wrap="Wrap"
+            JustifyContent="Center"
+            AlignItems="Center"
+            Margin="20"
+            Padding="10"/>
+
+
+
+                <!-- Controle 1: 0 a 5 anos -->
         <VerticalStackLayout Spacing="10">
                 <Label Text="0 A 5 ANOS" FontSize="18" HorizontalOptions="Center" TextColor="White" FontFamily="Canvas_Inline_Reg"/>
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
@@ -177,5 +182,6 @@
         </VerticalStackLayout>
 
     </VerticalStackLayout>
-        </ScrollView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
