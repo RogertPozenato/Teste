@@ -31,7 +31,7 @@ public partial class CadAgência : ContentPage
         {
             // Se tudo estiver certo:
             await DisplayAlert("Sucesso", "Cadastro realizado com sucesso!", "OK");
-            await Navigation.PushAsync(new NewPage2()); // vai para a próxima página
+            await Navigation.PushAsync(new OpcoesAgencia()); // vai para a próxima página
         }
         
     }

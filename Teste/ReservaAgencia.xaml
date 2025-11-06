@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Teste.ReservaAgencia"
+             Title="ReservaAgencia"
+              BackgroundColor="#4D5D39">
+    <ScrollView>
+
+
+        <VerticalStackLayout Padding="20" Spacing="30">
+
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <!-- Cabeçalho com botões -->
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                    <Button Text="◀" Clicked="Anterior_Clicked" />
+                    <Label x:Name="MonthLabel"
+                   FontSize="24"
+                   TextColor="White"
+                   HorizontalOptions="Center" />
+                    <Button Text="▶" Clicked="Proximo_Clicked" />
+                </HorizontalStackLayout>
+
+                <!-- Dias da semana -->
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="30">
+                    <Label Text="D" TextColor="White" FontSize="15" />
+                    <Label Text="S" TextColor="White" FontSize="15" />
+                    <Label Text="T" TextColor="White" FontSize="15" />
+                    <Label Text="Q" TextColor="White" FontSize="15" />
+                    <Label Text="Q" TextColor="White" FontSize="15" />
+                    <Label Text="S" TextColor="White" FontSize="15" />
+                    <Label Text="S" TextColor="White" FontSize="15" />
+                </HorizontalStackLayout>
+
+                <!-- Grade dinâmica -->
+
+                <Grid x:Name="CalendarGrid"
+              HorizontalOptions="Center"
+                      VerticalOptions="Center"
+              RowSpacing="10" ColumnSpacing="10" BackgroundColor="#680D2B" WidthRequest="350" HeightRequest="300"  />
+
+
+                <!-- Safras -->
+                <Label x:Name="SafraLabel"
+               FontSize="18"
+                FontFamily="Canvas_Inline_Reg"
+               TextColor="#FCBC71"
+               HorizontalOptions="Center"
+               Margin="10"/>
+
+
+                <FlexLayout x:Name="TimeSlotsLayout"
+            Direction="Row"
+            Wrap="Wrap"
+            JustifyContent="Center"
+            AlignItems="Center"
+            Margin="20"
+            Padding="10">
+                </FlexLayout>
+
+
+
+
+                <!-- Controle 1: 0 a 5 anos -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="0 A 5 ANOS" FontSize="18" HorizontalOptions="Center" TextColor="White" FontFamily="Canvas_Inline_Reg"/>
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                        <Border Stroke="Gray" StrokeThickness="1" BackgroundColor="White" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25">
+                            <Label Text="-" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnMinusTapped1"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Border>
+                        <Border BackgroundColor="#EBB591" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 10">
+                            <Label x:Name="ZeroCinco" Text="0" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Border>
+                        <Border Stroke="Gray" StrokeThickness="1" BackgroundColor="White" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25">
+                            <Label Text="+" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnPlusTapped1"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Border>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+                <!-- Controle 2: 6 a 12 anos -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="6 A 12 ANOS" FontSize="18" HorizontalOptions="Center" TextColor="White" FontFamily="Canvas_Inline_Reg"/>
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                        <Border Stroke="Gray" StrokeThickness="1" BackgroundColor="White" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25">
+                            <Label Text="-" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnMinusTapped2"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Border>
+                        <Border BackgroundColor="#EBB591" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 10">
+                            <Label x:Name="SeisDoze" Text="1" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Border>
+                        <Border Stroke="Gray" StrokeThickness="1" BackgroundColor="White" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25">
+                            <Label Text="+" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnPlusTapped2"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Border>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+
+                <!-- Controle 3: Mais de 12 anos -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Adultos" FontSize="18" HorizontalOptions="Center" TextColor="White" FontFamily="Canvas_Inline_Reg"/>
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                        <Border Stroke="Gray" StrokeThickness="1" BackgroundColor="White" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25">
+                            <Label Text="-" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnMinusTapped3"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Border>
+                        <Border BackgroundColor="#EBB591" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 10">
+                            <Label x:Name="Adulto" Text="2" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Border>
+                        <Border Stroke="Gray" StrokeThickness="1" BackgroundColor="White" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25">
+                            <Label Text="+" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnPlusTapped3"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Border>
+                    </HorizontalStackLayout>
+
+                    <Label
+     Text=" Informação: crianças de 0 a 5 anos não paga e de 6 a 12 paga meio."
+     Background="#422345"
+     TextColor="White"
+     HorizontalOptions="Center"
+     ></Label>
+
+                    <VerticalStackLayout Padding="20" Spacing="15" >
+
+
+                        <Label Text="PASSEIO 
+                           R$ 15,00" 
+                       HorizontalOptions="Center"
+                       FontFamily="Canvas_Inline_Reg"
+                           FontSize="15"
+                       TextColor="White"/>
+                        <CheckBox x:Name="Passeio" 
+                           Color="#EBB591"
+                          WidthRequest="70"
+                          HeightRequest="70"/>
+
+                        <Label Text="CAFÉ CAIPIRA: 
+                       R$ 75,00"
+                       HorizontalOptions="Center"
+                       FontFamily="Canvas_Inline_Reg"
+                       TextColor="White"/>
+                        <CheckBox x:Name="CafeCaipira" 
+                          Color="#EBB591"
+                          WidthRequest="70"
+                          HeightRequest="70"/>
+
+                        <Label Text="CAFÉ RURAL: 
+                       R$ 60,00"
+                       HorizontalOptions="Center"
+                       FontFamily="Canvas_Inline_Reg"
+                       TextColor="White"/>
+                        <CheckBox x:Name="CafeRural" 
+                          Color="#EBB591"
+                          WidthRequest="70"
+                          HeightRequest="70"/>
+                        
+                        <Label Text="PRIMEIRO COMBO ( R$ 75,00 CAFÉ CAIPIRA + R$ 12,00 TAXA DE PASSEIO):
+                       R$ 87,00" 
+                       HorizontalOptions="Center"
+                       FontFamily="Canvas_Inline_Reg"
+                       TextColor="White"/>
+                        <CheckBox x:Name="Combo"
+                          Color="#EBB591"
+                          WidthRequest="70"
+                          HeightRequest="70"/>
+
+                        <Label Text="SEGUNDO COMBO ( R$ 60,00 CAFÉ RURAL + R$ 12,00 TAXA DE PASSEIO):
+                       R$ 72,00" 
+                       HorizontalOptions="Center"
+                       FontFamily="Canvas_Inline_Reg"
+                       TextColor="White"/>
+                        <CheckBox x:Name="ComboDois"
+                          Color="#EBB591"
+                          WidthRequest="70"
+                          HeightRequest="70"/>
+
+                        <Label x:Name="lblTotal" Text="VALOR TOTAL: R$ 00,00" FontSize="18" FontAttributes="Bold" TextColor="White" HorizontalOptions="Center" FontFamily="Canvas_Inline_Reg" />
+                        <Button Text="FAZER RESERVA" Clicked="OnFazerReservaClicked" BackgroundColor="#B27C5D" WidthRequest="300" FontFamily="Canvas_Inline_Reg" FontSize="16"/>
+
+                    </VerticalStackLayout>
+
+
+                </VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

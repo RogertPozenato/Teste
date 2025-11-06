@@ -10,15 +10,24 @@
             <CollectionView ItemsSource="{Binding Reservas}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <VerticalStackLayout Spacing="10" BackgroundColor="#F0F0F0" Padding="15" WidthRequest="400" HeightRequest="330">
-                            <Label Text="{Binding Nome}" FontSize="18" />
-                            <Label Text="{Binding Dia}" />
-                            <Label Text="{Binding Horario}" />
-                            <Label Text="{Binding Pessoas}" />
-                            <Label Text="{Binding Detalhes}" />
-                            <Label Text="{Binding Cafe}" />
-                            <Label Text="{Binding Valor}" FontAttributes="Bold" FontSize="16" />
-                        </VerticalStackLayout>
+
+                        <Border Stroke="Black"
+                              StrokeThickness="1"
+                              BackgroundColor="White"
+                              Padding="15"
+                              Margin="0,10"
+                              WidthRequest="500"
+                              StrokeShape="RoundRectangle 10">
+                            <VerticalStackLayout Spacing="15">
+
+                                <Label Text="{Binding Nome}" FontSize="18" FontAttributes="Bold"/>
+                                <Label Text="{Binding Dia}" />
+                                <Label Text="{Binding Horario}" />
+                                <Label Text="{Binding Detalhes}" />
+                                <Label Text="{Binding Cafe}" />
+                                <Label Text="{Binding Valor}" FontAttributes="Bold" FontSize="16" TextColor="Black"/>
+                            </VerticalStackLayout>
+                        </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>

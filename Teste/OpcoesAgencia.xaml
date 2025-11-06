@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Teste.OpcoesAgencia"
+             Title="OpcoesAgencia"
+              BackgroundColor="#4D5D39">
+    <VerticalStackLayout Padding="30" Spacing="25" HorizontalOptions="Center" VerticalOptions="Center">
+        <Button 
+    Text="Fazer Reserva"
+    Clicked="Button_Clicked1"
+    HorizontalOptions="Center"
+    BackgroundColor="White"
+    TextColor="Black"
+    FontAttributes="Bold"
+    CornerRadius="10"
+    BorderColor="Black"
+    BorderWidth="2"
+    Padding="15"
+    WidthRequest="200"
+    HeightRequest="50"
+></Button>
+
+        <Button 
+    Text="Suas Reservas"
+    Clicked="Button_Clicked"
+    HorizontalOptions="Center"
+    BackgroundColor="White"
+    TextColor="Black"
+    FontAttributes="Bold"
+    CornerRadius="10"
+    BorderColor="Black"
+    BorderWidth="2"
+    Padding="15"
+    WidthRequest="200"
+    HeightRequest="50"
+  ></Button>
+    </VerticalStackLayout>
+
+</ContentPage>

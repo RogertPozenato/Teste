@@ -1,11 +1,8 @@
-
-using System;
-using Microsoft.Maui.Controls;
 using Microsoft.Maui.Controls.Shapes;
 
 namespace Teste;
 
-public partial class Reserva : ContentPage
+public partial class ReservaAgencia : ContentPage
 {
     int valor1 = 0;
     int valor2 = 0;
@@ -18,8 +15,8 @@ public partial class Reserva : ContentPage
 
 
 
-    public Reserva()
-    {
+    public ReservaAgencia()
+	{
         InitializeComponent();
         GerarHorarios();
 
@@ -28,7 +25,9 @@ public partial class Reserva : ContentPage
 
         Passeio.CheckedChanged += OnItemCheckedChanged;
         CafeCaipira.CheckedChanged += OnItemCheckedChanged;
+        CafeRural.CheckedChanged += OnItemCheckedChanged;
         Combo.CheckedChanged += OnItemCheckedChanged;
+        ComboDois.CheckedChanged += OnItemCheckedChanged;
 
         UpdateTotal();
 
@@ -39,14 +38,7 @@ public partial class Reserva : ContentPage
         mesAtual = DateTime.Now;
         GerarCalendario(mesAtual);
         GerarHorarios();
-
-
     }
-
-
-
-
-
     void GerarCalendario(DateTime mes)
     {
         MonthLabel.Text = mes.ToString("MMMM yyyy").ToUpper();
@@ -206,17 +198,37 @@ public partial class Reserva : ContentPage
         if (checkBox == Passeio && Passeio.IsChecked)
         {
             CafeCaipira.IsChecked = false;
+            CafeRural.IsChecked = false;
             Combo.IsChecked = false;
+            ComboDois.IsChecked = false;
         }
         else if (checkBox == CafeCaipira && CafeCaipira.IsChecked)
         {
             Passeio.IsChecked = false;
+            CafeRural.IsChecked = false;
             Combo.IsChecked = false;
+            ComboDois.IsChecked = false;
+        }
+        else if (checkBox == CafeRural && CafeRural.IsChecked)
+        {
+            CafeCaipira.IsChecked = false;
+            Passeio.IsChecked = false;
+            Combo.IsChecked = false;
+            ComboDois.IsChecked = false;
         }
         else if (checkBox == Combo && Combo.IsChecked)
         {
             Passeio.IsChecked = false;
             CafeCaipira.IsChecked = false;
+            CafeRural.IsChecked = false;
+            ComboDois.IsChecked = false;
+        }
+        else if (checkBox == ComboDois && ComboDois.IsChecked)
+        {
+            Passeio.IsChecked = false;
+            CafeCaipira.IsChecked = false;
+            CafeRural.IsChecked = false;
+            Combo.IsChecked = false;
         }
 
         UpdateTotal();
@@ -233,8 +245,14 @@ public partial class Reserva : ContentPage
         if (CafeCaipira.IsChecked)
             total += 75.00;
 
+        if (CafeRural.IsChecked)
+            total += 60.00;
+
         if (Combo.IsChecked)
             total += 87.00;
+
+        if (ComboDois.IsChecked)
+            total += 72.00;
 
         lblTotal.Text = $"VALOR TOTAL: R$ {total:F2}";
     }
@@ -244,7 +262,7 @@ public partial class Reserva : ContentPage
     private async void OnFazerReservaClicked(object sender, EventArgs e)
     {
 
-        if (!Passeio.IsChecked && !CafeCaipira.IsChecked && !Combo.IsChecked)
+        if (!Passeio.IsChecked && !CafeCaipira.IsChecked && !CafeRural.IsChecked && !Combo.IsChecked && !ComboDois.IsChecked)
         {
 
         }
@@ -256,7 +274,7 @@ public partial class Reserva : ContentPage
 
         bool irParaProximaPagina = true;
 
-        if (irParaProximaPagina && !Passeio.IsChecked && !CafeCaipira.IsChecked && !Combo.IsChecked)
+        if (irParaProximaPagina && !Passeio.IsChecked && !CafeCaipira.IsChecked && !CafeRural.IsChecked && !Combo.IsChecked && !ComboDois.IsChecked)
         {
             await DisplayAlert("Erro", "Você precisa selecionar uma das opções para fazer a reserva.", "OK");
 
@@ -266,7 +284,7 @@ public partial class Reserva : ContentPage
             await Navigation.PushAsync(new Pagamento()); // vai para a próxima página
         }
     }
-    
+
 
 
 
@@ -330,6 +348,4 @@ public partial class Reserva : ContentPage
         SeisDoze.Text = valor2.ToString();
         Adulto.Text = valor3.ToString();
     }
-
-
 }
