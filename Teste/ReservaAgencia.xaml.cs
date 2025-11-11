@@ -6,7 +6,7 @@ public partial class ReservaAgencia : ContentPage
 {
     int valor1 = 0;
     int valor2 = 0;
-    int valor3 = 1;
+    int valor3 = 0;
 
     //Calendário
     DateTime mesAtual;
