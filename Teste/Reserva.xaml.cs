@@ -9,7 +9,7 @@ public partial class Reserva : ContentPage
 {
     int valor1 = 0;
     int valor2 = 0;
-    int valor3 = 0;
+    int valor3 = 1;
 
     //Calendário
     DateTime mesAtual;

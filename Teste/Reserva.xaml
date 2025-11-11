@@ -59,10 +59,31 @@
             Padding="10">
                 </FlexLayout>
 
+                <!-- Controle 1: Mais de 12 anos -->
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="ADULTOS" FontSize="18" HorizontalOptions="Center" TextColor="White" FontFamily="Canvas_Inline_Reg"/>
+                    <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                        <Border Stroke="Gray" StrokeThickness="1" BackgroundColor="White" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25">
+                            <Label Text="-" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnMinusTapped3"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Border>
+                        <Border BackgroundColor="#EBB591" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 10">
+                            <Label x:Name="Adulto" Text="2" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
+                        </Border>
+                        <Border Stroke="Gray" StrokeThickness="1" BackgroundColor="White" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25">
+                            <Label Text="+" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnPlusTapped3"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </Border>
+                    </HorizontalStackLayout>
 
 
-
-                <!-- Controle 1: 0 a 5 anos -->
+                    <!-- Controle 2: 0 a 5 anos -->
         <VerticalStackLayout Spacing="10">
                 <Label Text="0 A 5 ANOS" FontSize="18" HorizontalOptions="Center" TextColor="White" FontFamily="Canvas_Inline_Reg"/>
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
@@ -86,7 +107,7 @@
             </HorizontalStackLayout>
         </VerticalStackLayout>
 
-        <!-- Controle 2: 6 a 12 anos -->
+        <!-- Controle 3: 6 a 12 anos -->
         <VerticalStackLayout Spacing="10">
             <Label Text="6 A 12 ANOS" FontSize="18" HorizontalOptions="Center" TextColor="White" FontFamily="Canvas_Inline_Reg"/>
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
@@ -110,28 +131,7 @@
             </HorizontalStackLayout>
         </VerticalStackLayout>
 
-        <!-- Controle 3: Mais de 12 anos -->
-        <VerticalStackLayout Spacing="10">
-                <Label Text="Adultos" FontSize="18" HorizontalOptions="Center" TextColor="White" FontFamily="Canvas_Inline_Reg"/>
-            <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
-                <Border Stroke="Gray" StrokeThickness="1" BackgroundColor="White" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25">
-                    <Label Text="-" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnMinusTapped3"/>
-                        </Label.GestureRecognizers>
-                    </Label>
-                </Border>
-                <Border BackgroundColor="#EBB591" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 10">
-                    <Label x:Name="Adulto" Text="2" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center"/>
-                </Border>
-                <Border Stroke="Gray" StrokeThickness="1" BackgroundColor="White" WidthRequest="50" HeightRequest="50" StrokeShape="RoundRectangle 25">
-                    <Label Text="+" FontSize="24" HorizontalOptions="Center" VerticalOptions="Center">
-                        <Label.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="OnPlusTapped3"/>
-                        </Label.GestureRecognizers>
-                    </Label>
-                </Border>
-            </HorizontalStackLayout>
+
 
             <Label
      Text=" Informação: crianças de 0 a 5 anos não paga e de 6 a 12 paga meio."
