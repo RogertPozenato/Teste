@@ -139,7 +139,7 @@
                     <VerticalStackLayout Padding="20" Spacing="15" >
 
 
-                        <Label Text="PASSEIO 
+                        <Label Text="PASSEIO COM TAXA
                            R$ 15,00" 
                        HorizontalOptions="Center"
                        FontFamily="Canvas_Inline_Reg"
@@ -169,8 +169,8 @@
                           Color="#EBB591"
                           WidthRequest="70"
                           HeightRequest="70"/>
-                        
-                        <Label Text="PRIMEIRO COMBO ( R$ 75,00 CAFÉ CAIPIRA + R$ 12,00 TAXA DE PASSEIO):
+
+                        <Label Text="PRIMEIRO COMBO ( R$ 75,00 CAFÉ CAIPIRA + R$ 12,00 PASSEIO SEM TAXA):
                        R$ 87,00" 
                        HorizontalOptions="Center"
                        FontFamily="Canvas_Inline_Reg"
@@ -180,7 +180,7 @@
                           WidthRequest="70"
                           HeightRequest="70"/>
 
-                        <Label Text="SEGUNDO COMBO ( R$ 60,00 CAFÉ RURAL + R$ 12,00 TAXA DE PASSEIO):
+                        <Label Text="SEGUNDO COMBO ( R$ 60,00 CAFÉ RURAL + R$ 12,00 PASSEIO SEM TAXA):
                        R$ 72,00" 
                        HorizontalOptions="Center"
                        FontFamily="Canvas_Inline_Reg"

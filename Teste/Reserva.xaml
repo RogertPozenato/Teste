@@ -141,9 +141,9 @@
      ></Label>
 
                 <VerticalStackLayout Padding="20" Spacing="15" >
-                    
-                    
-                    <Label Text="PASSEIO 
+
+
+                        <Label Text="PASSEIO COM TAXA 
                            R$ 15,00" 
                        HorizontalOptions="Center"
                        FontFamily="Canvas_Inline_Reg"
@@ -165,7 +165,7 @@
                           HeightRequest="70"/>
 
 
-                        <Label Text="COMBO ( R$ 75,00 CAFÉ CAIPIRA + R$ 12,00 TAXA DE PASSEIO):
+                        <Label Text="COMBO ( R$ 75,00 CAFÉ CAIPIRA + R$ 12,00 PASSEIO SEM TAXA):
                        R$ 87,00" 
                        HorizontalOptions="Center"
                        FontFamily="Canvas_Inline_Reg"
