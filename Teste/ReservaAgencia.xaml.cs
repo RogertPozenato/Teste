@@ -25,9 +25,7 @@ public partial class ReservaAgencia : ContentPage
 
         Passeio.CheckedChanged += OnItemCheckedChanged;
         CafeCaipira.CheckedChanged += OnItemCheckedChanged;
-        CafeRural.CheckedChanged += OnItemCheckedChanged;
         Combo.CheckedChanged += OnItemCheckedChanged;
-        ComboDois.CheckedChanged += OnItemCheckedChanged;
 
         UpdateTotal();
 
@@ -198,37 +196,17 @@ public partial class ReservaAgencia : ContentPage
         if (checkBox == Passeio && Passeio.IsChecked)
         {
             CafeCaipira.IsChecked = false;
-            CafeRural.IsChecked = false;
             Combo.IsChecked = false;
-            ComboDois.IsChecked = false;
         }
         else if (checkBox == CafeCaipira && CafeCaipira.IsChecked)
         {
             Passeio.IsChecked = false;
-            CafeRural.IsChecked = false;
             Combo.IsChecked = false;
-            ComboDois.IsChecked = false;
-        }
-        else if (checkBox == CafeRural && CafeRural.IsChecked)
-        {
-            CafeCaipira.IsChecked = false;
-            Passeio.IsChecked = false;
-            Combo.IsChecked = false;
-            ComboDois.IsChecked = false;
         }
         else if (checkBox == Combo && Combo.IsChecked)
         {
             Passeio.IsChecked = false;
             CafeCaipira.IsChecked = false;
-            CafeRural.IsChecked = false;
-            ComboDois.IsChecked = false;
-        }
-        else if (checkBox == ComboDois && ComboDois.IsChecked)
-        {
-            Passeio.IsChecked = false;
-            CafeCaipira.IsChecked = false;
-            CafeRural.IsChecked = false;
-            Combo.IsChecked = false;
         }
 
         UpdateTotal();
@@ -243,16 +221,10 @@ public partial class ReservaAgencia : ContentPage
             total += 15.00;
 
         if (CafeCaipira.IsChecked)
-            total += 75.00;
-
-        if (CafeRural.IsChecked)
-            total += 60.00;
+            total += 70.00;
 
         if (Combo.IsChecked)
-            total += 87.00;
-
-        if (ComboDois.IsChecked)
-            total += 72.00;
+            total += 82.00;
 
         lblTotal.Text = $"VALOR TOTAL: R$ {total:F2}";
     }
@@ -262,7 +234,7 @@ public partial class ReservaAgencia : ContentPage
     private async void OnFazerReservaClicked(object sender, EventArgs e)
     {
 
-        if (!Passeio.IsChecked && !CafeCaipira.IsChecked && !CafeRural.IsChecked && !Combo.IsChecked && !ComboDois.IsChecked)
+        if (!Passeio.IsChecked && !CafeCaipira.IsChecked && !Combo.IsChecked)
         {
 
         }
@@ -274,7 +246,7 @@ public partial class ReservaAgencia : ContentPage
 
         bool irParaProximaPagina = true;
 
-        if (irParaProximaPagina && !Passeio.IsChecked && !CafeCaipira.IsChecked && !CafeRural.IsChecked && !Combo.IsChecked && !ComboDois.IsChecked)
+        if (irParaProximaPagina && !Passeio.IsChecked && !CafeCaipira.IsChecked)
         {
             await DisplayAlert("Erro", "Você precisa selecionar uma das opções para fazer a reserva.", "OK");
 

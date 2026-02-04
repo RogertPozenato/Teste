@@ -155,7 +155,7 @@
                           HeightRequest="70"/>
 
                 <Label Text="CAFÉ CAIPIRA: 
-                       R$ 75,00"
+                       R$ 70,00"
                        HorizontalOptions="Center"
                        FontFamily="Canvas_Inline_Reg"
                        TextColor="White"/>
@@ -165,8 +165,8 @@
                           HeightRequest="70"/>
 
 
-                        <Label Text="COMBO ( R$ 75,00 CAFÉ CAIPIRA + R$ 12,00 PASSEIO SEM TAXA):
-                       R$ 87,00" 
+                        <Label Text="COMBO ( R$ 70,00 CAFÉ CAIPIRA + R$ 12,00 PASSEIO SEM TAXA):
+                       R$ 82,00" 
                        HorizontalOptions="Center"
                        FontFamily="Canvas_Inline_Reg"
                        TextColor="White"/>

@@ -231,10 +231,10 @@ public partial class Reserva : ContentPage
             total += 15.00;
 
         if (CafeCaipira.IsChecked)
-            total += 75.00;
+            total += 70.00;
 
         if (Combo.IsChecked)
-            total += 87.00;
+            total += 82.00;
 
         lblTotal.Text = $"VALOR TOTAL: R$ {total:F2}";
     }

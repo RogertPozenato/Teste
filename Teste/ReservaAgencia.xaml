@@ -151,7 +151,7 @@
                           HeightRequest="70"/>
 
                         <Label Text="CAFÉ CAIPIRA: 
-                       R$ 75,00"
+                       R$ 70,00"
                        HorizontalOptions="Center"
                        FontFamily="Canvas_Inline_Reg"
                        TextColor="White"/>
@@ -160,32 +160,12 @@
                           WidthRequest="70"
                           HeightRequest="70"/>
 
-                        <Label Text="CAFÉ RURAL: 
-                       R$ 60,00"
-                       HorizontalOptions="Center"
-                       FontFamily="Canvas_Inline_Reg"
-                       TextColor="White"/>
-                        <CheckBox x:Name="CafeRural" 
-                          Color="#EBB591"
-                          WidthRequest="70"
-                          HeightRequest="70"/>
-
-                        <Label Text="PRIMEIRO COMBO ( R$ 75,00 CAFÉ CAIPIRA + R$ 12,00 PASSEIO SEM TAXA):
-                       R$ 87,00" 
+                        <Label Text="COMBO ( R$ 75,00 CAFÉ CAIPIRA + R$ 12,00 PASSEIO SEM TAXA):
+                       R$ 82,00" 
                        HorizontalOptions="Center"
                        FontFamily="Canvas_Inline_Reg"
                        TextColor="White"/>
                         <CheckBox x:Name="Combo"
-                          Color="#EBB591"
-                          WidthRequest="70"
-                          HeightRequest="70"/>
-
-                        <Label Text="SEGUNDO COMBO ( R$ 60,00 CAFÉ RURAL + R$ 12,00 PASSEIO SEM TAXA):
-                       R$ 72,00" 
-                       HorizontalOptions="Center"
-                       FontFamily="Canvas_Inline_Reg"
-                       TextColor="White"/>
-                        <CheckBox x:Name="ComboDois"
                           Color="#EBB591"
                           WidthRequest="70"
                           HeightRequest="70"/>
