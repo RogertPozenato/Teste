@@ -16,27 +16,29 @@ public partial class ReservaAgencia : ContentPage
 
 
     public ReservaAgencia()
-	{
+    {
         InitializeComponent();
-        GerarHorarios();
 
+        // Sincroniza com o que aparece na tela
+        valor1 = 0; // 0 a 5
+        valor2 = 0; // 6 a 12
+        valor3 = 0; // Adultos
 
-        // Adiciona eventos para atualizar o valor total
+        AtualizarValores();
 
         Passeio.CheckedChanged += OnItemCheckedChanged;
         CafeCaipira.CheckedChanged += OnItemCheckedChanged;
         Combo.CheckedChanged += OnItemCheckedChanged;
 
-        UpdateTotal();
-
-        AtualizarValores();
-
-        //Calendário
-
         mesAtual = DateTime.Now;
         GerarCalendario(mesAtual);
         GerarHorarios();
     }
+
+
+
+
+
     void GerarCalendario(DateTime mes)
     {
         MonthLabel.Text = mes.ToString("MMMM yyyy").ToUpper();
@@ -215,19 +217,33 @@ public partial class ReservaAgencia : ContentPage
 
     private void UpdateTotal()
     {
-        double total = 0;
+        double precoBase = 0;
 
+        // Verifica qual opção foi escolhida
         if (Passeio.IsChecked)
-            total += 15.00;
+            precoBase = 15.00;
+        else if (CafeCaipira.IsChecked)
+            precoBase = 70.00;
+        else if (Combo.IsChecked)
+            precoBase = 82.00;
 
-        if (CafeCaipira.IsChecked)
-            total += 70.00;
+        // Quantidades por idade
+        int criancasGratis = valor1; // 0 a 5 (não paga)
+        int meiaEntrada = valor2;    // 6 a 12 (meia)
+        int adultos = valor3;        // +12 (inteiro)
 
-        if (Combo.IsChecked)
-            total += 82.00;
+        // Total de pessoas (para reserva)
+        int totalPessoas = criancasGratis + meiaEntrada + adultos;
 
-        lblTotal.Text = $"VALOR TOTAL: R$ {total:F2}";
+        // Cálculo do preço
+        double total =
+            (adultos * precoBase) +
+            (meiaEntrada * (precoBase / 2));
+        // Crianças 0-5 não pagam
+
+        lblTotal.Text = $"PESSOAS: {totalPessoas} | VALOR TOTAL: R$ {total:F2}";
     }
+
 
 
 
@@ -236,25 +252,25 @@ public partial class ReservaAgencia : ContentPage
 
         if (!Passeio.IsChecked && !CafeCaipira.IsChecked && !Combo.IsChecked)
         {
-
-        }
-        else
-        {
-
-            await DisplayAlert("Reserva", "Pedido concluído com sucesso!", "OK");
-        }
-
-        bool irParaProximaPagina = true;
-
-        if (irParaProximaPagina && !Passeio.IsChecked && !CafeCaipira.IsChecked)
-        {
             await DisplayAlert("Erro", "Você precisa selecionar uma das opções para fazer a reserva.", "OK");
+            return;
+        }
 
-        }
-        else
+
+        int totalPessoas = valor1 + valor2 + valor3;
+
+        if (totalPessoas == 0)
         {
-            await Navigation.PushAsync(new Pagamento()); // vai para a próxima página
+            await DisplayAlert("Erro", "Adicione pelo menos 1 pessoa na reserva.", "OK");
+            return;
         }
+
+
+        await DisplayAlert("Reserva", "Reserva realizada com sucesso!", "OK");
+
+
+        await Navigation.PushAsync(new Pagamento());
+
     }
 
 
@@ -319,5 +335,9 @@ public partial class ReservaAgencia : ContentPage
         ZeroCinco.Text = valor1.ToString();
         SeisDoze.Text = valor2.ToString();
         Adulto.Text = valor3.ToString();
+
+        // Atualiza o valor total sempre que mudar a quantidade
+        UpdateTotal();
     }
+
 }

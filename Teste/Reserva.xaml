@@ -144,7 +144,7 @@
 
 
                         <Label Text="PASSEIO COM TAXA 
-                           R$ 15,00" 
+                           R$ 15,00 por passoa" 
                        HorizontalOptions="Center"
                        FontFamily="Canvas_Inline_Reg"
                            FontSize="15"
@@ -155,7 +155,7 @@
                           HeightRequest="70"/>
 
                 <Label Text="CAFÉ CAIPIRA: 
-                       R$ 70,00"
+                       R$ 70,00 por pessoa"
                        HorizontalOptions="Center"
                        FontFamily="Canvas_Inline_Reg"
                        TextColor="White"/>
@@ -166,7 +166,7 @@
 
 
                         <Label Text="COMBO ( R$ 70,00 CAFÉ CAIPIRA + R$ 12,00 PASSEIO SEM TAXA):
-                       R$ 82,00" 
+                       R$ 82,00 por pessoa" 
                        HorizontalOptions="Center"
                        FontFamily="Canvas_Inline_Reg"
                        TextColor="White"/>
